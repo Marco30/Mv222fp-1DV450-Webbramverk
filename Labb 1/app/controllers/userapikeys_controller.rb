@@ -1,0 +1,2 @@
+class UserapikeysController < ApplicationController
+end

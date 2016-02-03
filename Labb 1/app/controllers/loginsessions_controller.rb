@@ -1,0 +1,2 @@
+class LoginsessionsController < ApplicationController
+end
