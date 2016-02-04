@@ -15,8 +15,11 @@ u2 = ApiUser.create(:email => "marco.villegas@live.se", :password => "test123", 
 
 
 UserApiKey.delete_all
-ak1 = UserApiKey.create
-ak2 = UserApiKey.create
+ak1 = UserApiKey.create(:api_user_id=>u1.id)
+ak2 = UserApiKey.create(:api_user_id=>u2.id)
+ak3 = UserApiKey.create(:api_user_id=>u2.id)
 
-u1.user_api_key = ak1
-u2.user_api_key = ak2
+
+
+
+

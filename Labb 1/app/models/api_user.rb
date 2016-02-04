@@ -1,6 +1,7 @@
 class ApiUser < ActiveRecord::Base
   
- has_one :user_api_key, dependent: :destroy # ger en dubbelriktad association, om en avändare tasbort så tas henns api key bort också
+ #has_one :user_api_key, dependent: :destroy # ger en dubbelriktad association, om en avändare tasbort så tas henns api key bort också
+ has_many :user_api_keys, dependent: :destroy # ger en dubbelriktad association, om en avändare tasbort så tas henns api key bort också
   
   before_save { self.email = email.downcase } # gör så att email blir lowercase (små bokstäverr) 
   # before_save gör det möjligt att ändra värdet innan det sparars till databasen 
