@@ -2,7 +2,7 @@ class UserApiKeysController < ApplicationController
     
          before_action :check_user
          
-          def create
+          def create# skapar ny apiKey
              
       UserApiKey.create(:api_user_id=>params[:api_user_id])
        
@@ -10,7 +10,7 @@ class UserApiKeysController < ApplicationController
              
          end
          
-         def index
+         def index # inte använt bara testat saker 
              
              api_user_id = params[:api_user_id]
              if api_user_id.nil?
@@ -24,20 +24,14 @@ class UserApiKeysController < ApplicationController
              
          end
 
-  def show
-    #@key = @current_user.user_api_keys
-    #@key = ApiUser.find_by_id(@current_user.id)
-      #@user = ApiUser.find(params[:api_user_id])
-    #@apikeys = UserApiKey.find(params[:api_user_id])
-     #@apikeys = @user.user_api_keys.find(params[:id])
+  def show # visar alla api keys en användare har 
      
       @user = ApiUser.find(params[:api_user_id])
                  @apikeys = @user.user_api_keys 
-                 
-	#	@domain = Domain.new(:apikey => @apikey)
+                
   end
   
-  def destroy
+  def destroy# tar bort en api kay
       
 
 begin
@@ -47,10 +41,6 @@ rescue ActiveRecord::RecordNotFound
   redirect_to api_user_user_api_key_path(params[:api_user_id], params[:api_user_id])
   
 end
-
-
-   #@apikeys = UserApiKey.find(params[:id])
-    # @apikeys.destroy
     
   end
     

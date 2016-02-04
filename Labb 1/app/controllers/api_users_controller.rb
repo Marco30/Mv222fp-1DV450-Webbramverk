@@ -1,13 +1,13 @@
 class ApiUsersController < ApplicationController
     
-      before_action :check_user, only: [:delete]
+  before_action :check_user, only: [:delete]
   before_action :check_admin, only: [:delete_user]
 
   def new
     @user = ApiUser.new
   end
 
-  def create
+  def create# skapar användare och ny key
     @user = ApiUser.new(user_params)
 
     if @user.save
@@ -26,16 +26,16 @@ class ApiUsersController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy #tar bort användare 
     @user = ApiUser.find_by_id(params[:id])
     @user.destroy
     
-    if is_admin_logged_in?
-      flash[:success] = 'User and key has been deleted.'
+    if is_admin_logged_in?# när man tar bort som admin
+      flash[:success] = 'User has been deleted'
       redirect_to admin_path
-    else
+    else# när man tar bort som användare
       log_out
-      flash[:warning] = 'User and key has been deleted. Register for a new key.'
+      flash[:warning] = 'your user and key has been deleted'
       redirect_to root_path
     end
   end
