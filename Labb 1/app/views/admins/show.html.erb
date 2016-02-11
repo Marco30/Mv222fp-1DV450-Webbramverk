@@ -1,6 +1,6 @@
 <div>
   <br>
-<%= link_to 'Logout', logout_admin_path, class: "btn btn-danger btn-lg center" %>
+<%= link_to 'Logout', logout_admin_path, data: {no_turbolink: true}, class: "btn btn-danger btn-lg center" %>
   <br>
   <h2>Users and keys</h2>
 
@@ -13,7 +13,7 @@
               
               <% user.user_api_keys.each do |p| %>
 
-              <td><h5>Key:</h5> <%= p.value %></td>
+              <td><h5>Key:</h5> <%= p.value %> <br> <%= link_to 'Delete ApiKey', adminApikeyD_path(p.id,p.api_user_id), :data => {:confirm => 'Are you sure?'}%></td>
         
 
         <% end %>

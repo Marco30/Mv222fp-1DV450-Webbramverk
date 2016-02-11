@@ -1,6 +1,6 @@
 class UserApiKeysController < ApplicationController
     
-         before_action :check_user
+         before_action :check#check_user
          
           def create# skapar ny apiKey
              
@@ -38,10 +38,30 @@ begin
    @apikeys = UserApiKey.find(params[:id])
    @apikeys.destroy
 rescue ActiveRecord::RecordNotFound
-  redirect_to api_user_user_api_key_path(params[:api_user_id], params[:api_user_id])
+
+
+ redirect_to api_user_user_api_key_path(params[:api_user_id], params[:api_user_id])
   
 end
     
   end
+  
+  
+  
+  def admindestroyUserkey# tar bort en api kay
+      
+
+    begin
+       @apikeys = UserApiKey.find(params[:id])
+       @apikeys.destroy
+    rescue ActiveRecord::RecordNotFound
+    
+      
+         redirect_to admin_path
+      
+    end
+    
+  end
+  
     
 end

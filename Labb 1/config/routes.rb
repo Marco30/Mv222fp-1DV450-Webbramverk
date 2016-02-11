@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     get   '/logout'  => 'loginsessions#destroy', as: :logout_user
   get   'api_users/:id/:api_user_id' => 'user_api_keys#destroy', as: :apikeyD
   get   'api_users/:api_user_id' => 'user_api_keys#create', as: :new_apikey
+get   'api_admin/:id/:api_user_id' => 'user_api_keys#admindestroyUserkey', as: :adminApikeyD
 
   get   'admin' => 'admins#show', as: :admin
 

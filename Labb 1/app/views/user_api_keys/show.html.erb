@@ -1,17 +1,17 @@
 <div class="col-md-6 col-md-offset-3 text-center">
   <br>
-<%= link_to 'Logout', logout_user_path, class: "btn btn-danger btn-lg center" %>
+<%= link_to 'Logout', logout_user_path, data: {no_turbolink: true}, class: "btn btn-danger btn-lg center" %>
   <br>
   
   <h2>All Your Keys</h2>
   
   <% @apikeys.each do |p| %>
- <p><%= p.value %> <%= p.id %> <%= p.api_user_id%><br> <%= link_to 'Delete ApiKey', apikeyD_path(p.id,p.api_user_id), :data => {:confirm => 'Are you sure?'}%></p>
+ <p><%= p.value %><br> <%= link_to 'Delete ApiKey', apikeyD_path(p.id,p.api_user_id), :data => {:confirm => 'Are you sure?'},class: "nav-link-right" %></p>
 <% end %>
 <br>
-<%= link_to 'New ApiKey', new_apikey_path(@current_user.id), class: "btn btn-danger btn-lg center" %>
+<%= link_to 'New ApiKey', new_apikey_path(@current_user.id), class: "nav-link-right"  %>
 <br>
-  <%= link_to 'Delete User account', api_user_path(@current_user.id), method: :delete, :data => {:confirm => 'Are you sure?'}, class: "btn btn-danger btn-lg center" %>
+  <%= link_to 'Delete User account', api_user_path(@current_user.id), method: :delete, :data => {:confirm => 'Are you sure?'}, class: "nav-link-right"  %>
 <br>
 
 </div>

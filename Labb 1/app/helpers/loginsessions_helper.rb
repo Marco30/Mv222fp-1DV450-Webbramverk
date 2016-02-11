@@ -49,6 +49,19 @@ module LoginsessionsHelper
     end
   end
   
+  
+  def check# kotrolerar om admin man är in logad 
+   
+    if is_admin_logged_in? == true
+
+    elsif is_logged_in? == true
+
+    else
+    flash[:danger] = "login before visit this part of the application!!!"
+            redirect_to root_path
+    end
+    
+  end
 
     
 end
