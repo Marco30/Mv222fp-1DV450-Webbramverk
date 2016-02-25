@@ -32,7 +32,7 @@ class PlacesController < ApplicationController
     place  = Place.find_by_id(params[:id].to_i)
     
     if place 
-      attraction.tags.delete_all
+      place.tags.delete_all
       user = place.user
       
       if @token_payload["user_id"].to_i == user.id
@@ -57,9 +57,19 @@ class PlacesController < ApplicationController
   def create
     place = Place.new(place_params)
     
+   # tag = Tag.new(tag_params)
+    
     place.user_id = @token_payload["user_id"]
     
-    if place.save
+    
+   # if Tag.find_by_name(tag.name.downcase).present?
+     # tag = Tag.find_by_name(tag.name.downcase)
+    #end
+
+  #place.tags << tag
+    
+    
+    if place.save 
       respond_with place, status: :created
     else
       error = ErrorMessage.new("Resursen kunde inte skapas", "Turistplatsen kunde inte skapas")
@@ -87,7 +97,7 @@ class PlacesController < ApplicationController
           render json: error, status: :bad_request
         end
       else
-        error = ErrorMessage.new("Du får inte radera denna resurs", "Du kan inte radera denna platsen")
+        error = ErrorMessage.new("Du får inte radera denna resurs", "Du kan inte radera denna plats")
         render json: error, status: :forbidden
       end
     else
@@ -103,5 +113,12 @@ class PlacesController < ApplicationController
     json_params = ActionController::Parameters.new(JSON.parse(request.body.read))
     json_params.require(:place).permit(:address, :latitude, :longitude, tag_ids: [] )
   end
+  
+  
+#private
+  #def tag_params
+   # json_params = ActionController::Parameters.new(JSON.parse(request.body.read))
+  #json_params.require(:tag).permit(:nam, :address, :latitude, :longitude)
+  #end
     
 end
