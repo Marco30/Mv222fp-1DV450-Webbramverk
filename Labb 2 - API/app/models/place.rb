@@ -3,15 +3,14 @@ class Place < ActiveRecord::Base
       
   before_save { self.address = address.downcase }
   
-  #geocoded_by :address
- # after_validation :geocode, :if => :address_changed?
+ geocoded_by :address
+ after_validation :geocode, :if => :address_changed?
   
-  include Rails.application.routes.url_helpers 
   
   belongs_to :user
   has_and_belongs_to_many :tags
 
-#accepts_nested_attributes_for :tags
+
 
   validates :address, 
             presence: true,
@@ -22,13 +21,8 @@ class Place < ActiveRecord::Base
   def serializable_hash (options={} )
     options = {
       only: [:address, :latitude, :longitude, :id],
-      methods: [:self_link]
       }.update(options)
     super(options)
-  end
-  
-  def self_link
-    { :self => "#{Rails.configuration.baseurl}#{place_path(self)}" }
   end
     
 end

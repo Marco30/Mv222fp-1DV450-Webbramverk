@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
     
-     
+   
+    #man måste loga in för att få en togen som gör att man kan komuniserar med apien 
   def api_auth
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])

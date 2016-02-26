@@ -12,8 +12,8 @@ t3 = Tag.create(:name => "USA")
 t4 = Tag.create(:name => "Sverige")
 
 User.delete_all
-u1 = User.create(:username => "User1", :email => "email@email.com", :password => "123", :password_confirmation => "123")
-u2 = User.create(:username => "User2", :email => "epost@epost.com", :password => "123", :password_confirmation => "123")
+u1 = User.create(:username => "marco", :email => "marco@live.se", :password => "marco123", :password_confirmation => "marco123")
+u2 = User.create(:username => "test", :email => "test@live.se", :password => "test123", :password_confirmation => "test123")
 
 ApiKey.delete_all
 au1 = ApiKey.create(:user_id => u1.id)
