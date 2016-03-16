@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ <html data-ng-app="clientApp">
+   <head>
+    <base href="/">
+     <title>Favorite Places</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   </head>
+   <body data-ng-controller="appCtrl as app">
+     <h1 class="jumbotrone">Favorite Places</h1>
+     
+     <hr />
+     <div data-ng-include src="'partials/shared/menu.html'"></div>
+     <hr />
+     
+     <div data-ng-view></div>
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    
+     <script src="app.js"></script>
+     <script src="services/APIService.js"></script>
+     <script src="services/LoginService.js"></script>
+       <script src="controllers/LoginC.js"></script>
+     <script src="controllers/CRUDC.js"></script>
+
+
+
+   
+   </body>
+</html>

@@ -1,0 +1,9 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" data-ng-href="/">login</a>
+            <a class="navbar-brand" data-ng-href="myplaces" data-ng-if="app.isLoggedIn()">Favorite Places</a>
+      <button data-ng-if="app.isLoggedIn()" data-ng-click="app.logout()">Log out</button>
+    </div>
+  </div>
+</nav>

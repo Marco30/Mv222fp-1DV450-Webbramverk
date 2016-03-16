@@ -1,0 +1,18 @@
+<div class="container">
+  <h1> {{ crud.username | uppercase }}</h1>
+  <div class="col-md-6">
+    <p> {{ crud.message}} </p>
+    <a data-ng-if="crud.isLoggedIn" data-ng-href="new">Add Place</a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Places</th>
+        </tr>
+        <tr data-ng-repeat="a in crud.places">
+          <td>{{ a.address | uppercase }}</td>
+
+        </tr>
+      </thead>
+     </table>
+  </div>
+</div>
