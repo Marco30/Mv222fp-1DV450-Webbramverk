@@ -26,7 +26,6 @@ function LoginService ($http, $q, $rootScope)
     return $http(request)
       .success(function(data) 
       {
-        alert(JSON.stringify(data));
       $rootScope.token = data.auth_token;
       $rootScope.user_id = data.user_id;
     });

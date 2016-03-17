@@ -23,7 +23,18 @@ angular
         controller: 'LoginController',
         controllerAs: 'loginctrl'
         }).
-
+        when('/users', 
+        {
+          templateUrl: 'partials/user/list-user.html',
+          controller: 'UserListController',
+          controllerAs: 'users'
+        }).
+        when('/users/:id', 
+        {
+          templateUrl: 'partials/user/detail-user.html',
+          controller: 'UserDetailController',
+          controllerAs: 'user'
+        }).
        when('/myplaces', 
        {
          templateUrl: 'partials/user/list-user-place.html',

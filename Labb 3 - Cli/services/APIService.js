@@ -14,7 +14,7 @@ function APIService($http, $rootScope, API)
     {
       angular.extend(this, data);
     }
-
+    
    Resource.getSingle = function(obj) 
    {
      var url;
@@ -103,7 +103,6 @@ function APIService($http, $rootScope, API)
      });
    };
    
-  
    Resource.update = function(obj, attr) 
    {
      var url;

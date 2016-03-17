@@ -10,7 +10,9 @@
         </tr>
         <tr data-ng-repeat="a in crud.places">
           <td>{{ a.address | uppercase }}</td>
-
+          <td data-ng-if="crud.isLoggedIn"><a data-ng-href="places/{{a.id}}/edit">Update Place</a></td>
+        
+          <td data-ng-if="crud.isLoggedIn"><button type="button" ng-click="crud.deletePlace(a.id)">Remove Place</button></td>
         </tr>
       </thead>
      </table>
