@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Places</h3>
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td>{{places.message}}</td>
+        </tr>
+        <tr data-ng-repeat="a in places.placeList">
+          <td>{{ a.address | uppercase }}</td>
+          <td><a data-ng-href="places/{{a.id}}">More info</a></td>
+        </tr>
+      </thead>
+     </table>
+  </div>
+</div>

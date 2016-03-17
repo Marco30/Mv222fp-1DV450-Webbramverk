@@ -1,0 +1,19 @@
+<div class="container">
+  <h1> {{ place.address | uppercase }}</h1>
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tags</th>
+        </tr>
+        <tr>
+          <td>{{place.message}}</td>
+        </tr>
+        <tr data-ng-repeat="t in place.tags">
+          <td>{{ t.name | uppercase }}</td>
+          <td><a data-ng-href="tags/{{t.id}}">More info</a></td>
+        </tr>
+      </thead>
+     </table>
+  </div>
+</div>

@@ -31,7 +31,7 @@ function UserService(Resource, $q, $rootScope)
       
       return deferred.promise;
     },
-
+    
     get:function() 
     {
 

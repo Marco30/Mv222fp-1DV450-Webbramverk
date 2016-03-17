@@ -13,7 +13,7 @@ angular
       $location.path('/');
   }
   }])
-  .config(['$routeProvider',
+  .config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider)
     {
       $routeProvider.
@@ -22,6 +22,30 @@ angular
         templateUrl: 'partials/login.html',
         controller: 'LoginController',
         controllerAs: 'loginctrl'
+        }).
+        when('/places', 
+        {
+          templateUrl: 'partials/place/list-place.html',
+          controller: 'PlaceListController',
+          controllerAs: 'places'
+        }).
+        when('/places/:id', 
+        {
+          templateUrl: 'partials/place/detail-place..html',
+          controller: 'PlaceDetailController',
+          controllerAs: 'place'
+        }).
+        when('/places/:id/edit', 
+        {
+          templateUrl: 'partials/place/edit-place.html',
+          controller: 'PlaceEditController',
+          controllerAs: 'edit'
+        }).
+        when('/new', 
+        {
+          templateUrl: 'partials/place/new-place.html',
+          controller: 'PlaceCreateController',
+          controllerAs: 'create'
         }).
         when('/users', 
         {
@@ -55,7 +79,7 @@ angular
         otherwise({
           redirectTo: '/'
         });
-
+      
     }])
     .constant('API', 
     { 

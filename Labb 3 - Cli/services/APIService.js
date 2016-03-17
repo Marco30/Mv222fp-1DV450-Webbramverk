@@ -60,6 +60,8 @@ function APIService($http, $rootScope, API)
       });
     };
  
+   
+   //Skapar en resurs
    Resource.create = function(obj, attr) 
    {
      var url;
@@ -81,7 +83,8 @@ function APIService($http, $rootScope, API)
        return response;
      });
    };
-
+   
+   //Tar bort en resurs
    Resource.delete = function(obj) 
    {
      var url;
@@ -103,6 +106,7 @@ function APIService($http, $rootScope, API)
      });
    };
    
+
    Resource.update = function(obj, attr) 
    {
      var url;
