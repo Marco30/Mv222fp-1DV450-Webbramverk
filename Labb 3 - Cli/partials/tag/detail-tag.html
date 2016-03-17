@@ -1,0 +1,19 @@
+<div class="container">
+  <h1> {{ tag.name | uppercase }} </h1>
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Places</th>
+        </tr>
+        <tr>
+          <td>{{tag.message}}</td>
+        </tr>
+        <tr data-ng-repeat="a in tag.places">
+          <td>{{ a.address | uppercase }}</td>
+          <td><a data-ng-href="places/{{a.id}}">More info</a></td>
+        </tr>
+      </thead>
+     </table>
+  </div>
+</div>

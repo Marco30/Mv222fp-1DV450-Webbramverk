@@ -34,7 +34,7 @@ function APIService($http, $rootScope, API)
        return response;
      });
    };
-   
+
     Resource.getCollection = function() 
     {
       
@@ -81,7 +81,7 @@ function APIService($http, $rootScope, API)
        return response;
      });
    };
-   
+
    Resource.delete = function(obj) 
    {
      var url;

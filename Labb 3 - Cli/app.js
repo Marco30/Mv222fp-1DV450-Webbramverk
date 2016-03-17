@@ -1,5 +1,5 @@
 angular
-  .module('clientApp', ['ngRoute'])
+  .module('clientApp', ['ngRoute', 'tagDirective'])
   .controller('appCtrl', ['$rootScope', function ($rootScope) {
     var vm = this;
     vm.isLoggedIn = function () {
@@ -14,7 +14,7 @@ angular
   }
   }])
   .config(['$routeProvider',
-    function($routeProvider)
+    function($routeProvider, $locationProvider)
     {
       $routeProvider.
         when('/', 
@@ -35,6 +35,16 @@ angular
           controller: 'UserDetailController',
           controllerAs: 'user'
         }).
+       when('/tags', 
+       {
+          templateUrl: 'partials/tag/list-tag.html',
+        }).
+        when('/tags/:id', 
+        {
+          templateUrl: 'partials/tag/detail-tag.html',
+          controller: 'TagDetailController',
+          controllerAs: 'tag'
+        }).
        when('/myplaces', 
        {
          templateUrl: 'partials/user/list-user-place.html',
@@ -45,7 +55,7 @@ angular
         otherwise({
           redirectTo: '/'
         });
-      
+
     }])
     .constant('API', 
     { 
