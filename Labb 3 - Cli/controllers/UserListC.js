@@ -8,7 +8,8 @@ function UserListController(userService)
 {
   
   var vm = this;
-
+  
+  //hämtar alla användare från api 
   var userPromise = userService.get();
   userPromise
     .then(function(data)

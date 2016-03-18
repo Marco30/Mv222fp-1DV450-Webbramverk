@@ -9,6 +9,7 @@ function UserDetailController($routeParams, userService)
 
   var vm = this;
   
+  //hämtar data för en användare 
   var userPromise = userService.getUser($routeParams.id);
   userPromise.then(function(data)
   {

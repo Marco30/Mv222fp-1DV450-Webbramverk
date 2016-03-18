@@ -8,7 +8,7 @@ function LoginController($http, $rootScope, $location, loginService)
 {
   
   var vm = this;
-   
+   // loggin, skickar eamil och lösen till api
   vm.login = function ()
   {
     var loginPromise = loginService.loginUser(vm.email, vm.password);

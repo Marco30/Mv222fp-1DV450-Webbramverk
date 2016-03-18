@@ -8,6 +8,9 @@ function PlaceListController(placeService)
 {
  
   var vm = this;
+  
+  //hämtar alla platser från api  
+  
   var placePromise = placeService.get();
   placePromise
     .then(function(data)

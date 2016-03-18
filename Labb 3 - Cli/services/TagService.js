@@ -11,6 +11,7 @@ function TagService(Resource, $q, $rootScope)
   
   return {
     
+       //hämtar en vald tagg
     getTag:function(id) {
       
       var deferred = $q.defer();
@@ -21,7 +22,7 @@ function TagService(Resource, $q, $rootScope)
       
       promise.success(function(data)
       {
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
         /*alert(data.places[1].address );*/
         deferred.resolve(data);
       }).catch(function()
@@ -31,6 +32,7 @@ function TagService(Resource, $q, $rootScope)
       return deferred.promise;
     },
     
+    //hämtar alla taggar
     get:function()
     {
       

@@ -9,22 +9,27 @@ function PlaceCreateController($routeParams, $rootScope, placeService, tagServic
    
   var vm = this;
   vm.isLoggedIn = $rootScope.isLoggedIn;
-
+  
+  //kontrolerar om man är inloggad 
   if ($rootScope.isLoggedIn) 
   {
-
+ 
+    //här skapar vi en ny plats 
     vm.createPlace = function() 
     {
-      var log = vm.selectedTags();
+      
+      var log = vm.selectedTags();// checkbox
       var tagArray = [];
       
-
+      //lägger tagari en array
       angular.forEach(log, function(value, key) 
       {
         this.push(value.id);
       }, tagArray);
       
 
+      
+      //här skapar vi en plats 
       var createPromise = placeService.createPlace(vm.address, tagArray);
       createPromise.then(function(data)
       {
@@ -35,6 +40,7 @@ function PlaceCreateController($routeParams, $rootScope, placeService, tagServic
       })
     };
     
+              //hämtar tagar 
        var tagPromise = tagService.get();
     
     tagPromise.then(function(data)
@@ -46,7 +52,7 @@ function PlaceCreateController($routeParams, $rootScope, placeService, tagServic
       vm.message = error;
     });
     
-
+    //tagar i checkbox
     vm.selection = [];
     vm.selectedTags = function selectedTags() 
     {

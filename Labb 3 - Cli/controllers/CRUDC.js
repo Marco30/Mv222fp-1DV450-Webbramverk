@@ -9,7 +9,8 @@ function CRUDController($http, $rootScope, $routeParams, userService, placeServi
   
   var vm = this;
   vm.isLoggedIn = $rootScope.isLoggedIn;
-
+  
+  //if statt kontroll om man är inloggad och hämtar anändar dat om amn är inloggad 
   if($rootScope.isLoggedIn)
   {
     var userPromise = userService.getUser($rootScope.user_id);
@@ -25,9 +26,10 @@ function CRUDController($http, $rootScope, $routeParams, userService, placeServi
   } 
   else 
   {
-    vm.message = "You are not logged in.";
+    vm.message = "You'r not logged in.";
   }
-
+  
+  //if satsen kontrollerar om man är in loggad, är man det så kan man ta bort platser man skappat
   if($rootScope.isLoggedIn)
   {
     vm.deletePlace = function(id) 
@@ -53,7 +55,7 @@ function CRUDController($http, $rootScope, $routeParams, userService, placeServi
   } 
   else 
   {
-    vm.message = "You are not logged in.";
+    vm.message = "You'r not logged in.";
   }
   
 }

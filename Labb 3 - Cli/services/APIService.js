@@ -15,6 +15,8 @@ function APIService($http, $rootScope, API)
       angular.extend(this, data);
     }
     
+   
+   //get funktion som hämtar enskild API data
    Resource.getSingle = function(obj) 
    {
      var url;
@@ -34,7 +36,8 @@ function APIService($http, $rootScope, API)
        return response;
      });
    };
-
+   
+    //get funktion som hämtar all begärd data
     Resource.getCollection = function() 
     {
       
@@ -61,7 +64,7 @@ function APIService($http, $rootScope, API)
     };
  
    
-   //Skapar en resurs
+   //post funktnion som addar datat till api
    Resource.create = function(obj, attr) 
    {
      var url;
@@ -84,7 +87,7 @@ function APIService($http, $rootScope, API)
      });
    };
    
-   //Tar bort en resurs
+   //delit funktnion som tar bort valda data
    Resource.delete = function(obj) 
    {
      var url;
@@ -106,7 +109,8 @@ function APIService($http, $rootScope, API)
      });
    };
    
-
+   
+     //put funktnion som updaterar vis data på apien
    Resource.update = function(obj, attr) 
    {
      var url;

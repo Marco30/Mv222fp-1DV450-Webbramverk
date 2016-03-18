@@ -8,6 +8,8 @@ function PlaceDetailController($routeParams, placeService)
 {
 
   var vm = this;
+  
+  //hämtar en plats och ann dens data
   var placePromise = placeService.getPlace($routeParams.id);
   placePromise.then(function(data)
   {

@@ -1,6 +1,6 @@
 angular
-  .module('clientApp', ['ngRoute', 'tagDirective'])
-  .controller('appCtrl', ['$rootScope', function ($rootScope) {
+  .module('clientApp', ['ngRoute', 'ngMap', 'tagDirective'])
+  .controller('appCtrl', ['$rootScope', '$location', function ($rootScope, $location) {
     var vm = this;
     vm.isLoggedIn = function () {
       return $rootScope.isLoggedIn;
@@ -69,6 +69,18 @@ angular
           controller: 'TagDetailController',
           controllerAs: 'tag'
         }).
+        when('/map', 
+        {
+         templateUrl: 'partials/map.html',
+          controller: 'MapController',
+          controllerAs: 'mapctrl'
+        }).
+        when('/search', 
+        {
+         templateUrl: 'partials/search.html',
+          controller: 'SearchController',
+          controllerAs: 'searchctrl'
+        }).
        when('/myplaces', 
        {
          templateUrl: 'partials/user/list-user-place.html',
@@ -80,6 +92,7 @@ angular
           redirectTo: '/'
         });
       
+      $locationProvider.html5Mode(true);
     }])
     .constant('API', 
     { 

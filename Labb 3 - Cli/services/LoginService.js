@@ -4,6 +4,7 @@ angular
 
 LoginService.$inject = ['$http', '$q', '$rootScope'];
 
+// logain mot api
 function LoginService ($http, $q, $rootScope) 
 {
   

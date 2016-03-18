@@ -10,7 +10,8 @@ angular
     var Place = Resource('places');
     
     return {
-
+      
+      //hämtar alla paltser
       get:function() 
       {
         
@@ -23,6 +24,7 @@ angular
         return deferred.promise;
       },
       
+          //Skapar en plats
       createPlace:function(address, tagArray) 
       {
         
@@ -48,7 +50,7 @@ angular
         return deferred.promise;
       },
       
-      //Hämtar en enskild turistattraktion
+      //hämtar en vald plats
       getPlace:function(id) 
       {
         
@@ -69,6 +71,7 @@ angular
         return deferred.promise;
       },
       
+           //Uppdaterar en vald plats
       updatePlace:function(id, address, tagArray)
       {
         
@@ -93,7 +96,8 @@ angular
 
         return deferred.promise;
       },
-
+      
+      //tar bort en plats
       deletePlace:function(id){
         
         var deferred = $q.defer();

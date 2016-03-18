@@ -11,6 +11,8 @@ function UserService(Resource, $q, $rootScope)
   
   return {
     
+    
+     //hämtar en vald användare
     getUser:function(id) 
     {
       
@@ -32,6 +34,7 @@ function UserService(Resource, $q, $rootScope)
       return deferred.promise;
     },
     
+    //hämtar alla användare
     get:function() 
     {
 
