@@ -2,7 +2,7 @@ class Tag < ActiveRecord::Base
     
  before_save { self.name = name.downcase }
   
-  
+  include Rails.application.routes.url_helpers 
   
   has_and_belongs_to_many :places
   
@@ -14,9 +14,13 @@ class Tag < ActiveRecord::Base
     options = {
       only: [:name, :id],
       include: [:places],
+      methods: [:self_link]
     }.update(options)
     super(options)
   end
   
+  def self_link
+    { :self => "#{Rails.configuration.baseurl}#{tag_path(self)}" }
+  end
   
 end

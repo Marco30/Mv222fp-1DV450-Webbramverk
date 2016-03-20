@@ -2,34 +2,34 @@
 
 ##Instruktioner 
 
-gÃ¥ till https://c9.io/ 
-Ã¶pnna ny Ruby on Rails projekt 
+gå till https://c9.io/ 
+öpnna ny Ruby on Rails projekt 
 
 Ladda upp filerna 
 
-i rails cloud9 terminal-fÃ¶nstret
+i rails cloud9 terminal-fönstret
 
-KÃ¶r bundle install 
+Kör bundle install 
 
-KÃ¶r db:migrate fÃ¶r databasen
+Kör db:migrate för databasen
 
-KÃ¶r db:seed fÃ¶r att ladda data i databasen
+Kör db:seed för att ladda data i databasen
 
-starta servern i cloud9 och kopierar cloud9 server adressen fÃ¶r att anvÃ¤nda det i postman
+starta servern i cloud9 och kopierar cloud9 server adressen för att använda det i postman
 
-Innan du bÃ¶rjar anvÃ¤nda postman sÃ¥ ska du gÃ¥ till cloud9 terminalen, fÃ¶r att fÃ¥ din APIkey som generas automatiks 
+Innan du börjar använda postman så ska du gå till cloud9 terminalen, för att få din APIkey som generas automatiks 
 
 rails c 
 
 ApiKey.all
 
-Kopierar APIKey fÃ¶r att anvÃ¤nda det i postman
+Kopierar APIKey för att använda det i postman
 
-Visa saker i api krÃ¤ver en autentiserar token, den fÃ¥r du genom att loga in i api,  det gÃ¶r du genom postman filen som finns med 
+Visa saker i api kräver en autentiserar token, den får du genom att loga in i api,  det gör du genom postman filen som finns med 
 
-Ã¶ppna postman 
+öppna postman 
 
-funktionerna i postman funkar sÃ¥ fort du lag till din cloud9 server adress, din APIKey och autentiserar token 
+funktionerna i postman funkar så fort du lag till din cloud9 server adress, din APIKey och autentiserar token 
 
 
 
