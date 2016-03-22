@@ -1,4 +1,4 @@
-***om API är ner meddela mig här eller i marco.villegas@live.se, kör en API på cloud9 och den stängs av efter ett dygn av ina aktvitet***
+***om du vill testa klieten som är live på http://paradiseblue.nu/ och API är ner meddela mig här eller på marco.villegas@live.se så får jag upp den ingen, kör APIen på cloud9 och den stängs av efter ett dygn av inaktivitet***
 
 **API/Klient**
 
