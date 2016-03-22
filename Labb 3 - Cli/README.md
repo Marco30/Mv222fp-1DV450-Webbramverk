@@ -1,4 +1,11 @@
-***om du vill testa klieten som är live på http://paradiseblue.nu/ och API är ner meddela mig här eller på marco.villegas@live.se så får jag upp den ingen, kör APIen på cloud9 och den stängs av efter ett dygn av inaktivitet***
+###om du vill testa klieten som är live på http://paradiseblue.nu/ och API är ner meddela mig här eller på marco.villegas@live.se så får jag upp den ingen, kör APIen på cloud9 och den stängs av efter ett dygn av inaktivitet###
+
+###vill du sätta upp allt själv så är det bara att kopierar alla filer till cloud 9 och sen ändra hårkodade länkar till apien som då också borde körs på cloud 9###
+
+Ändra, URL och APikey i  LoginService.js, Tagdirective.js, app.js , till din cloud9 server URL och APikey som då genererats i API du satt upp. Mer information hur du sätter upp APIen i clodu9 hittar du i API readme 
+
+https://github.com/Marco30/Mv222fp-1DV450-Webbramverk/tree/master/Labb%202%20-%20API
+
 
 **API/Klient**
 
