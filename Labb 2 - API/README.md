@@ -1,35 +1,38 @@
 #Labb 2 - API 
 
+***fÃ¶r att den hÃ¤r API ska funka med kligenten jag byggt pÃ¥ cloud 9 sÃ¥ mÃ¥ste man Ã¤ndra den hÃ¥r kodade config.baseurl = "https://labb2-marco30.c9users.io" som finns i config/environments/development.rb till server adresen som du fÃ¥r i det cloud9 proejktet du anvÃ¤nder fÃ¶r att kÃ¶ra APIen ***
+
+
 ##Instruktioner 
 
-gå till https://c9.io/ 
-öpnna ny Ruby on Rails projekt 
+gÃ¥ till https://c9.io/ 
+Ã¶pnna ny Ruby on Rails projekt 
 
 Ladda upp filerna 
 
-i rails cloud9 terminal-fönstret
+i rails cloud9 terminal-fÃ¶nstret
 
-Kör bundle install 
+KÃ¶r bundle install 
 
-Kör db:migrate för databasen
+KÃ¶r db:migrate fÃ¶r databasen
 
-Kör db:seed för att ladda data i databasen
+KÃ¶r db:seed fÃ¶r att ladda data i databasen
 
-starta servern i cloud9 och kopierar cloud9 server adressen för att använda det i postman
+starta servern i cloud9 och kopierar cloud9 server adressen fÃ¶r att anvÃ¤nda det i postman
 
-Innan du börjar använda postman så ska du gå till cloud9 terminalen, för att få din APIkey som generas automatiks 
+Innan du bÃ¶rjar anvÃ¤nda postman sÃ¥ ska du gÃ¥ till cloud9 terminalen, fÃ¶r att fÃ¥ din APIkey som generas automatiks 
 
 rails c 
 
 ApiKey.all
 
-Kopierar APIKey för att använda det i postman
+Kopierar APIKey fÃ¶r att anvÃ¤nda det i postman
 
-Visa saker i api kräver en autentiserar token, den får du genom att loga in i api,  det gör du genom postman filen som finns med 
+Visa saker i api krÃ¤ver en autentiserar token, den fÃ¥r du genom att loga in i api,  det gÃ¶r du genom postman filen som finns med 
 
-öppna postman 
+Ã¶ppna postman 
 
-funktionerna i postman funkar så fort du lag till din cloud9 server adress, din APIKey och autentiserar token 
+funktionerna i postman funkar sÃ¥ fort du lag till din cloud9 server adress, din APIKey och autentiserar token 
 
 
 
