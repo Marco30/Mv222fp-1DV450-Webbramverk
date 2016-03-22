@@ -1,6 +1,6 @@
 #Labb 2 - API 
 
-###för att den här API ska funka med kligenten jag byggt på cloud 9 så måste man ändra den hår kodade config.baseurl = "https://labb2-marco30.c9users.io" som finns i config/environments/development.rb till server adresen som du får i det cloud9 proejktet du använder för att köra APIen ###
+**för att den här API ska funka med kligenten jag byggt på cloud 9 så måste man ändra den hår kodade config.baseurl = "https://labb2-marco30.c9users.io" som finns i config/environments/development.rb till server adresen som du får i det cloud9 proejktet du använder för att köra APIen**
 
 
 ##Instruktioner 
